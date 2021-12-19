@@ -1,0 +1,49 @@
+
+'Visual Basic
+
+        'Declaration 
+        Dim str1 As String
+        Dim i As Integer
+        Dim char1 As Char
+        Dim x As Integer
+        Dim char2 As Char
+        Dim charcount As Integer
+        Dim repeated As Integer
+        Dim repeat As Char
+
+        'Initialization 
+        str1 = ""
+        i = 0
+        char1 = ""
+        x = 0
+        char2 = ""
+        charcount = 0
+        repeated = 0
+        repeat = ""
+
+        'Input
+        Console.Write("Enter String: ")
+        str1 = Console.ReadLine
+        str1 = LCase(str1)
+
+        'Process
+        For i = 1 To Len(str1)
+            char1 = Mid(str1, i, 1)
+
+            For x = 1 To Len(str1)
+                char2 = Mid(str1, x, 1)
+                If char1 = char2 Then
+                    charcount = charcount + 1
+                End If
+                If charcount > repeated Then
+                    repeated = charcount
+                    repeat = char1
+                End If
+            Next x
+            charcount = 0
+        Next i
+
+        'Output 
+        Console.WriteLine("most repeated character: " & repeat)
+        Console.WriteLine(" number of times repeated: " & repeated - 1)
+        Console.ReadKey()

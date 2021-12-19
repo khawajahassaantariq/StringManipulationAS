@@ -1,0 +1,47 @@
+//Pseudocode
+
+//Declaration 
+Declare str1 : String
+Declare i : Integer
+Declare char1 : Character
+Declare x : Integer
+Declare char2 : Character
+Declare charcount : Integer
+Declare repeated : Integer
+Declare repeat : Character
+
+//Initialization 
+str1 <-- ""
+i <-- 0
+char1 <-- ''
+x <-- 0
+char2 <-- ''
+charcount <-- 0
+repeated <-- 0
+repeat <-- ''
+
+//Input
+INPUT "Enter String: ", str1
+str1 = LCase(str1)
+
+//Process
+For i <-- 1 To Len(str1)
+char1 <-- Mid(str1, i, 1)
+    For x <-- 1 To Len(str1)
+        char2 <-- Mid(str1, x, 1)
+        If char1 <-- char2 Then
+            charcount <-- charcount + 1
+		End If
+        If charcount > repeated Then
+            repeated <-- charcount
+            repeat = char1
+        End If
+    Next x
+    charcount = 0
+Next i
+
+//Output 
+OUTPUT "most repeated character: ", repeat
+OUTPUT " number of times repeated: ", repeated - 1)
+
+---------------------------------------------------------------------
