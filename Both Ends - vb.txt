@@ -1,0 +1,26 @@
+
+'VisualBasic
+
+        'Declaration
+        Dim s, F2, L2, Final As String
+
+        'Initialization
+        s = ""
+        F2 = ""
+        L2 = ""
+        Final = ""
+
+        'Input
+        Console.Write("Input String: ")
+        s = Console.ReadLine
+
+
+        'Process
+        If Len(s) > 2 Then
+            F2 = Left(s, 2)
+            L2 = Right(s, 2)
+            Console.WriteLine("Your New String is: " & F2 & L2)
+        Else : Console.WriteLine("Your New String is: " & s)
+        End If
+
+        Console.ReadKey()

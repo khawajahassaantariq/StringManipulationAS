@@ -1,0 +1,23 @@
+//Pseudocode
+
+//Declaration
+DECLARE s, F2, L2, Final : String
+
+//Initialization
+s <-- ""	
+F2 <-- ""
+L2 <-- ""
+Final <-- ""
+
+//Input
+Input "Input String: ", s
+
+//Process
+IF LEN(s) > 2
+	Then F2 <-- Left(s,2) 
+	L2 <-- Right(s,2)
+	OUTPUT "Your New String is: " F2 + L2	
+	Else OUTPUT "Your New String is: ", s
+ENDIF
+
+---------------------------------------------------------------------------------
