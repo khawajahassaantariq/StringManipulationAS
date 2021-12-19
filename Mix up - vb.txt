@@ -1,0 +1,33 @@
+
+ 'VisualBasic
+
+        'Declaration
+        Dim Str1, Str2, F1, F2, F3, F4, Final As String
+
+        'Initialization
+        Str1 = ""
+        Str2 = ""
+        F1 = ""
+        F2 = ""
+        F3 = ""
+        F4 = ""
+        Final = ""
+
+        'Input
+        Console.Write("Input First String: ")
+        Str1 = Console.ReadLine
+
+        Console.Write("Input Second String: ")
+        Str2 = Console.ReadLine
+
+        'Process
+        F1 = Left(Str2, 2)
+        F2 = Right(Str1, Len(Str1) - 2)
+        F3 = Left(Str1, 2)
+        F4 = Right(Str2, Len(Str2) - 2)
+        Final = F1 & F2 & " " & F3 & F4
+
+        'Output
+        Console.WriteLine("Final String is:" & Final)
+
+        Console.ReadKey()

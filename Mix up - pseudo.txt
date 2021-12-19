@@ -1,0 +1,29 @@
+//Pseudocode
+
+//Declaration
+DECLARE Str1, Str2, F1, F2, F3, F4, Final : String
+
+//Initialization
+Str1 <-- ""
+Str2 <-- ""
+F1 <-- ""
+F2 <-- ""
+F3 <-- ""
+F4 <-- ""
+Final <-- ""
+
+//Input
+Input "Input First String: ", Str1
+Input "Input Second String: ", Str2
+
+//Process
+F1 <-- Left(Str2, 2)
+F2 <-- Right(Str1, Len(Str1) - 2)
+F3 <-- Left(Str1, 2)
+F4 <-- Right(Str2, Len(Str2) - 2)
+Final <-- F1 + F2 + " " + F3 + F4
+
+//Output
+OUTPUT "Final String is:", Final
+
+--------------------------------------------------------------------------
