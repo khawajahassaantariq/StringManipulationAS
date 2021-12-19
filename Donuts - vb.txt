@@ -1,0 +1,23 @@
+
+'VisualBasic
+
+        'Declaration
+        Dim Donuts As Integer
+
+        'Initialization
+        Donuts = 0
+
+        'Input
+        Console.Write("How many donuts do you want to buy?: ")
+        Donuts = Console.ReadLine
+
+
+        'Process
+        If Donuts > 9 Then
+            Console.WriteLine("Number of Donuts: Many")
+        ElseIf Donuts > 0 And Donuts < 10 Then
+            Console.WriteLine("Number of Donuts: " & Donuts)
+        Else : Console.WriteLine("Error")
+        End If
+
+        Console.ReadKey()

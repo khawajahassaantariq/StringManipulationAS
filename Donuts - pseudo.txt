@@ -1,0 +1,21 @@
+//Pseudocode
+
+//Declaration
+DECLARE Donuts : INTEGER
+
+//Initialization
+Donuts <-- 0	
+
+//Input
+Input "How many donuts do you want to buy?: ", Donuts
+
+//Process
+If Donuts >9
+	Then OUTPUT "Number of Donuts: Many"
+	ElseIF Donuts > 0 and Donuts < 10
+		Then OUTPUT "Number of Donuts: ", Donuts
+	Else OUTPUT "Error"
+	ENDIF
+ENDIF
+
+--------------------------------------------------------------------------------------
