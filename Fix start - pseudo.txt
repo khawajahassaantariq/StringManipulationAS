@@ -1,0 +1,37 @@
+//Pseudocode
+
+//Declaration
+DECLARE s, Str3 : STRING
+DECLARE Char1, Char2 : CHARACTER
+DECLARE i : INTEGER
+
+//Initialization
+s <-- ""
+Str3 <-- ""
+Char1 <-- ""
+Char2 <-- ""
+i <-- 0
+
+//Input
+INPUT "Enter String: ", s
+
+//Process
+Str3 <-- Left(s, 1)
+Char1 <-- Left(s, 1)
+For i <-- 2 To Len(s)
+	Char2 <-- Mid(s, i, 1)
+	If Char1 = Char2
+		THEN Str3 = Str3 + '*'
+		Else Str3 = Str3 & Char2
+	End If
+Next i
+
+//Output
+OUTPUT "Your Final String is: ", Str3
+
+
+
+
+
+
+---------------------------------------------------------------
