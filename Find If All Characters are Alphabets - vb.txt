@@ -1,0 +1,33 @@
+'VisualBasic
+
+        'Declaration
+        Dim Str1 As String
+        Dim Char1 As Char
+        Dim i As Integer
+        Dim isAlphabet As Boolean
+
+        'Initialization
+        Str1 = ""
+        Char1 = ""
+        i = 0
+        isAlphabet = True
+
+        'Input
+        Console.Write("Enter String To Check For Alphabets:")
+        Str1 = Console.ReadLine
+        Str1 = UCase(Str1)
+
+        'Process
+        For i = 1 To Len(Str1)
+            Char1 = Mid(Str1, 1, 1)
+            If Char1 < "A" Or Char1 > "Z" Then isAlphabet = False
+            If isAlphabet = False Then Exit For
+        Next i
+
+        'Output
+        If isAlphabet = True Then
+            Console.WriteLine("All Characters are Alphabets")
+        ElseIf isAlphabet = False Then
+            Console.WriteLine("All Characters are not Alphabets")
+        End If
+        Console.ReadKey()

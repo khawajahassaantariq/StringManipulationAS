@@ -1,0 +1,35 @@
+
+//pseudocode
+
+//Declaration
+DECLARE Str1 : STRING
+DECLARE Char1 : CHARACTER
+DECLARE i : INTEGER
+DECLARE isAlphabet : Boolean //flag
+
+//Initialization
+Str1 <-- ""
+Char 1 <-- ''
+i <-- 0
+isAlphabet <-- "TRUE"
+
+//Input
+INPUT "Enter String To Check For Alphabets", Str1
+Str1 <-- UCASE(Str1)
+
+//Process
+FOR i <-- 1 TO LEN(Str1)
+	CHAR <-- MID(Str1,i,1)
+    IF CHAR < 'A' OR CHAR > 'Z' THEN isAlphabet <-- "False"
+	IF isAlphabet = "False" THEN Exit For
+Next i
+
+//Output
+IF isAlphabet = "TRUE"
+         THEN OUTPUT "All Characters are Alphabets"
+          ELSE OUTPUT "All Characters are not Alphabets"
+END IF
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------
+
+  
