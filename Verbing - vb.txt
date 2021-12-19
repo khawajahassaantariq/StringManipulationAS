@@ -1,0 +1,29 @@
+
+'VisualBasic
+
+        'Declaration
+        Dim V1, V2, Str1, Str2 As String
+
+        'Initialization
+        V1 = "ing"
+        V2 = "ly"
+        Str1 = ""
+        Str2 = ""
+
+        'Input
+        Console.Write("Input String For Verbing: ")
+        Str1 = Console.ReadLine
+        Str1 = LCase(Str1)
+
+        'Process
+        If Len(Str1) > 2 Then
+            Str2 = Right(Str1, 3)
+            If Str2 = V1 Then
+                Str1 = Str1 & V2
+            Else : Str1 = Str1 & V1
+            End If
+        End If
+
+        'Output
+        Console.WriteLine("Your Final String after Verbing is: " & Str1)
+        Console.ReadKey()
