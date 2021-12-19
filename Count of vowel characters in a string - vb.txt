@@ -1,0 +1,47 @@
+        
+ 'VisualBasic
+
+        'Declaration
+        Dim Str1 As String
+        Dim VA, VI, VO, VU, VE, i As Integer
+        Dim CHAR1 As Char
+
+        'Initialization
+        Str1 = ""
+        VA = 0
+        VI = 0
+        VO = 0
+        VU = 0
+        VE = 0
+        i = 0
+        CHAR1 = ""
+
+        'Input
+        Console.Write("Enter String to find the number of Vowel Characters: ")
+        Str1 = Console.ReadLine
+        Str1 = UCase(Str1)
+
+        'Process
+        For i = 1 To Len(Str1)
+            CHAR1 = Mid(Str1, i, 1)
+            If CHAR1 = "A" Then
+                VA = VA + 1
+            ElseIf CHAR1 = "I" Then
+                VI = VI + 1
+            ElseIf CHAR1 = "O" Then
+                VO = VO + 1
+            ElseIf CHAR1 = "U" Then
+                VU = VU + 1
+            ElseIf CHAR1 = "E" Then
+                VE = VE + 1
+            End If
+        Next i
+
+        'Output
+        Console.WriteLine("Total Number of As: " & VA)
+        Console.WriteLine("Total Number of Is: " & VI)
+        Console.WriteLine("Total Number of Os: " & VO)
+        Console.WriteLine("Total Number of Us: " & VU)
+        Console.WriteLine("Total Number of Es: " & VE)
+
+        Console.ReadKey()

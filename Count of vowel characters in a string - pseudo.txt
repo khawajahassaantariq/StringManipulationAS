@@ -1,0 +1,49 @@
+// Pseudocode
+
+//Declaration
+DECLARE Str1 : STRING
+DECLARE VA, VI, VO, VU, VE, i : INTEGER
+DECLARE CHAR1 : CHARACTER
+
+//Initialization
+Str1 <-- ""
+VA <-- 0
+VI <-- 0
+VO <-- 0
+VU <-- 0
+VE <-- 0
+i <-- 0
+CHAR1 <-- ''
+
+//Input
+Input "Enter String to find the number of Vowel Characters: ", Str1
+Str1 <-- UCASE(Str1)
+
+//Process
+FOR i <-- 1 TO LEN(Str1)
+     CHAR1<-- MID(Str1,i,1)
+         IF CHAR1 = 'A'
+             THEN VA <-- VA + 1
+              ELSEIF CHAR1 = 'I'
+                      THEN VI <-- VI + 1
+                      ELSEIF CHAR1 = 'O'
+                          THEN VO <-- VO + 1
+                           ELSEIF CHAR1 = 'U'
+                                THEN VU <-- VU + 1
+                                     ELSEIF CHAR1 = 'E'
+                                         THEN VE <-- VE + 1
+                                     ENDIF
+                           ENDIF
+                     ENDIF
+               ENDIF
+          ENDIF
+Next i
+
+//Output
+OUTPUT "Total Number of As: ", VA
+OUTPUT "Total Number of Is: ", VI
+OUTPUT "Total Number of Os: ", VO
+OUTPUT "Total Number of Us: ", VU
+OUTPUT "Total Number of Es: ", VE
+
+------------------------------------------------------
