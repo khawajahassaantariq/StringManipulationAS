@@ -1,0 +1,45 @@
+      
+'VisualBasic
+
+        'Declarations
+        Dim Str1 As String
+        Dim Length As Integer
+        Dim ACount As Integer
+        Dim NCount As Integer
+        Dim Others As Integer
+        Dim i As Integer
+        Dim CHAR1 As Char
+
+        'Initialization
+        Str1 = ""
+        Length = 0
+        ACount = 0
+        NCount = 0
+        Others = 0
+        i = 0
+        CHAR1 = ""
+
+        'Input
+        Console.Write("Enter String: ")
+        Str1 = Console.ReadLine
+        Length = Len(Str1)
+        Str1 = UCase(Str1)
+
+        'Process
+        For i = 1 To Length
+            CHAR1 = Mid(Str1, i, 1)
+            If CHAR1 >= "A" And CHAR1 <= "Z" Then
+                ACount = ACount + 1
+            ElseIf CHAR1 >= "0" And CHAR1 <= "9" Then
+                NCount = NCount + 1
+            Else : Others = Others + 1
+            End If
+        Next i
+
+        'Output
+        Console.WriteLine("Total Number Of Characters: " & Length)
+        Console.WriteLine("Total Number Of Alphabets: " & ACount)
+        Console.WriteLine("Total Number Of Number: " & NCount)
+        Console.WriteLine("Total Number Of Other Characters: " & Others)
+
+        Console.ReadKey()

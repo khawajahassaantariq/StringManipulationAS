@@ -1,0 +1,41 @@
+//Pseudocode
+
+//Declarations
+DECLARE Str1 : STRING
+DECLARE Length, ACount, NCount, Others, i : INTEGER
+DECLARE CHAR1 : CHARACTER
+
+//Initialization
+Str1 <-- 0
+Length <-- 0
+ACount <-- 0
+NCount <-- 0
+Others <-- 0
+i <-- 0
+CHAR1 <-- ''
+
+//Input
+INPUT "Enter String: ", Str1
+Length <-- LEN(Str1)
+Str1 <-- UCASE(Str1)
+
+//Process
+FOR i <-- 1 TO Length
+          CHAR1 <-- MID(Str1,i,1)
+           IF CHAR1 >= 'A' AND CHAR1 <= 'Z'
+                   THEN ACount <-- ACount + 1
+                   ELSE IF CHAR1 >= '0' AND CHAR1 <= '9'
+                            THEN NCount <-- NCount + 1
+                    ELSE Others <-- Others + 1
+                    ENDIF
+           ENDIF
+Next i
+
+//Output
+OUTPUT "Total Number Of Characters: ", Length
+OUTPUT "Total Number Of Alphabets: ", ACount
+OUTPUT "Total Number Of Number: ", NCount
+OUTPUT "Total Number Of Other Characters: ", Others
+
+-----------------------------------------------------------------------------------------
+      
